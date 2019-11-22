@@ -25,7 +25,7 @@ abstract class SmartArrayDecorator implements SmartArray {
 
     @Override
     public int size() {
-        return smartArray.size();
+        return toArray().length;
     }
 
     public SmartArray clone(SmartArray smartArray) {
