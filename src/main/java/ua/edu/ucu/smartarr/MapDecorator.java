@@ -1,7 +1,6 @@
 package ua.edu.ucu.smartarr;
 
 import ua.edu.ucu.functions.MyFunction;
-import ua.edu.ucu.functions.MyPredicate;
 
 import java.util.Arrays;
 
