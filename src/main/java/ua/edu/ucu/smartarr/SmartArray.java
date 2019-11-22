@@ -12,6 +12,6 @@ public interface SmartArray {
 
     int size(); // return SmartArray size
 
-    void setObjects(Object[] objects);
+    SmartArray clone(SmartArray clone);
 
 }

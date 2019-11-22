@@ -5,7 +5,7 @@ abstract class SmartArrayDecorator implements SmartArray {
     protected SmartArray smartArray;
 
     public SmartArrayDecorator(SmartArray smartArray) {
-        this.smartArray = smartArray;
+        this.smartArray = smartArray.clone(smartArray);
     }
 
     @Override
@@ -20,17 +20,16 @@ abstract class SmartArrayDecorator implements SmartArray {
 
     @Override
     public String operationDescription() {
-        return getClass().getSimpleName();
-    }
-
-    @Override
-    public void setObjects(Object[] objects) {
-        smartArray.setObjects(objects);
+        return "No Operation";
     }
 
     @Override
     public int size() {
         return smartArray.size();
+    }
+
+    public SmartArray clone(SmartArray smartArray) {
+        return new BaseArray(smartArray.toArray());
     }
 
 }
